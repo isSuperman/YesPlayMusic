@@ -61,3 +61,8 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+  
+    - name: Push notification
+      run: |
+         curl -sX POST "${{ secrets.BARKURL }}/${{ secrets.BARKKEY }}" -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' -d 'title=Action%20Status&body=Packages%20-%20compile%20finished!&group=GithubAction&icon=https://github.com/isSuperman/WrtFactory/blob/15f2afc79edd2340f46f87d415e6fc3bfae56930/images/barkGroupLogo.jpeg?raw=true'
+
