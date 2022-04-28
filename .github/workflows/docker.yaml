@@ -64,5 +64,5 @@ jobs:
   
     - name: Push notification
       run: |
-         curl -sX POST "${{ secrets.BARKURL }}/${{ secrets.BARKKEY }}" -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' -d 'title=Action%20Status&body=YesPlayMusic%20-%20docker%20build%20success!&group=GithubAction&icon=https://github.com/isSuperman/WrtFactory/blob/15f2afc79edd2340f46f87d415e6fc3bfae56930/images/barkGroupLogo.jpeg?raw=true'
+         curl -sX POST "${{ secrets.BARKURL }}/${{ secrets.BARKKEY }}" -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' -d 'title=Action%20Status&body=YesPlayMusic%20-%20docker%20build%20success!&group=GithubAction&icon=https://github.com/isSuperman/resource/raw/main/images/yesplaymusic.png'
 
